@@ -1,8 +1,8 @@
-# Voting DApp Layer 2 Architecture
+# election DApp Layer 2 Architecture
 
 ## Overview
 
-This document outlines the architecture for deploying a voting DApp on a Layer 2 (L2) solution, leveraging Optimistic Rollups (e.g., Arbitrum) for improved scalability, speed, and cost efficiency while maintaining the security of the Ethereum mainnet.
+This document outlines the architecture for deploying a election DApp on a Layer 2 (L2) solution, leveraging Optimistic Rollups (e.g., Arbitrum) for improved scalability, speed, and cost efficiency while maintaining the security of the Ethereum mainnet.
 
 ## L2 Network Selection
 
@@ -12,22 +12,22 @@ This document outlines the architecture for deploying a voting DApp on a Layer 2
 
 ## Smart Contracts Deployment
 
-### Voting Contract (L2)
+### election Contract (L2)
 - Deployed on the Optimistic Rollup chain.
 - Manages vote casting, proposal creation, and vote counting.
-- Stores the current state of the voting process.
+- Stores the current state of the election process.
 
 ### Mainnet Bridge Contract
 - A minimal contract on the Ethereum mainnet that interacts with the L2 network.
-- Stores the hash or summary of the final voting results for transparency and auditability.
+- Stores the hash or summary of the final election results for transparency and auditability.
 
 ## Workflow in L2 Architecture
 
 ### User Interaction
 - Users connect to the DApp using a Web3 wallet (like MetaMask) configured for the L2 network.
 
-### Off-chain Voting
-- The voting process, including proposal creation and vote submission, occurs on the L2 network.
+### Off-chain election
+- The election process, including proposal creation and vote submission, occurs on the L2 network.
 - Enables low-cost and fast transactions.
 
 ### Batch Processing
@@ -41,19 +41,19 @@ This document outlines the architecture for deploying a voting DApp on a Layer 2
 ### Fraud Proofs (Optimistic Rollups)
 - Users can submit fraud proofs within a challenge window if suspicious activity is detected, allowing for the reversal of malicious transactions.
 
-## Components of the L2 Voting DApp
+## Components of the L2 election DApp
 
-### L2 Voting Smart Contract
-- Manages all voting logic on the L2 network.
+### L2 election Smart Contract
+- Manages all election logic on the L2 network.
 - Handles proposal creation, vote casting, and tallying.
 
 ### Mainnet Bridge Contract
 - Simplified contract on Ethereum that manages state transitions from L2 to L1.
-- Records final voting results on the mainnet for auditability.
+- Records final election results on the mainnet for auditability.
 
 ### Front-end DApp
 - User interface configured to interact with the L2 network using Web3.js or Ethers.js.
-- Provides real-time interaction with the voting system, with transactions processed quickly on L2.
+- Provides real-time interaction with the election system, with transactions processed quickly on L2.
 
 ## Security Considerations
 
@@ -66,17 +66,17 @@ This document outlines the architecture for deploying a voting DApp on a Layer 2
 ### User Experience
 - Minimize manual interventions or complex configurations to ensure a seamless transition between L2 and L1.
 
-## Benefits of L2 Architecture for the Voting DApp
+## Benefits of L2 Architecture for the election DApp
 
 - **Scalability**: Offloading transactions to L2 allows the DApp to handle a large number of users without congestion.
-- **Cost Reduction**: Transaction fees are significantly lower on L2, making it affordable for users to participate in voting.
+- **Cost Reduction**: Transaction fees are significantly lower on L2, making it affordable for users to participate in election.
 - **Speed**: Transactions are confirmed faster on L2, enhancing the user experience.
-- **Security**: Final state is secured by Ethereum’s L1, maintaining the integrity of the voting process.
+- **Security**: Final state is secured by Ethereum’s L1, maintaining the integrity of the election process.
 
 ## Deployment Steps
 
 1. **Develop and Test Contracts on L2 Testnet**:
-   - Write and deploy the voting smart contracts on an Optimistic Rollup testnet like Arbitrum's testnet.
+   - Write and deploy the election smart contracts on an Optimistic Rollup testnet like Arbitrum's testnet.
 
 2. **Bridge Contract on Mainnet**:
    - Deploy the mainnet bridge contract that interacts with your L2 contracts.
@@ -92,6 +92,6 @@ This document outlines the architecture for deploying a voting DApp on a Layer 2
 
 ## Conclusion
 
-By adopting this L2 architecture for your voting DApp, you leverage the scalability and efficiency of L2 solutions while retaining the security benefits of Ethereum's mainnet. This approach ensures that your DApp remains cost-effective, scalable, and secure, making it a robust solution for decentralized voting.
+By adopting this L2 architecture for your election DApp, you leverage the scalability and efficiency of L2 solutions while retaining the security benefits of Ethereum's mainnet. This approach ensures that your DApp remains cost-effective, scalable, and secure, making it a robust solution for decentralized election.
 
 

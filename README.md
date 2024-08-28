@@ -1,9 +1,9 @@
 
-# Voting DApp
+# election DApp
 
 ## Description
 
-The Voting DApp is designed to provide a secure and decentralized platform for creating proposals and casting votes. The project is built using Solidity and utilizes Hardhat for smart contract development, testing, and deployment. It also leverages Hardhat Ignition for structured deployment scenarios.
+The election DApp is designed to provide a secure and decentralized platform for creating proposals and casting votes. The project is built using Solidity and utilizes Hardhat for smart contract development, testing, and deployment. It also leverages Hardhat Ignition for structured deployment scenarios.
 
 ## Prerequisites
 

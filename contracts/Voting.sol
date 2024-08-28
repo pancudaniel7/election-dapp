@@ -1,8 +1,8 @@
-// contracts/Voting.sol
+// contracts/election.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract Voting {
+contract election {
     struct Proposal {
         uint256 id;
         string description;
